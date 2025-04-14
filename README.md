@@ -1,4 +1,4 @@
-# Instagram Phishing Page for Educational Purposes
+# Instagram Phishing Page
 
 ## Project Description
 
